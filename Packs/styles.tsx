@@ -8,7 +8,17 @@ const Height = Dimensions.get('window').height
         height:Height,
         backgroundColor:"#1F1F1F",
     },
-   
+   Plus:{
+       width:80,
+       height:80,
+       backgroundColor:"#9D3AC0",
+       alignItems:"center",
+       justifyContent:"center",
+       borderRadius:50,
+       alignSelf:"center",
+       borderColor:"#fff",
+       borderWidth:0.8,
+   }
     
 })
 
@@ -45,13 +55,29 @@ export const Common = StyleSheet.create({
         height:55,
         backgroundColor:"#9D3AC0",
         borderRadius:50,
-        marginTop:10,
+        marginTop:8,
         shadowColor:"#fff",
         shadowRadius:1,
         alignItems:"center",
         justifyContent:"center",
-        
+        borderWidth:0.8,
+        borderColor:"#fff"
+    
+    },
 
-        
+})
+export const EM = StyleSheet.create({
+    Container:{
+        width:"80%",
+        height:"50%",
+        backgroundColor:"#622079",
+        position:"absolute",
+        top:"20%",
+        alignSelf:"center",
+        transform:[{translateY:50}],
+        borderRadius:5,borderWidth:0.8,
+        borderColor:"#fff",
+        alignItems:"center",
+        justifyContent:"center"
     }
 })
