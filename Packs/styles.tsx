@@ -1,9 +1,25 @@
-import { StyleSheet} from "react-native"
+import { StyleSheet, Dimensions} from "react-native"
+const Width = Dimensions.get('window').width
+const Height = Dimensions.get('window').height
 
- export const Styles = StyleSheet.create({
+ export const HomeStyle = StyleSheet.create({
     root:{
+        width:Width,
+        height:Height,
+        backgroundColor:"#1F1F1F",
+    },
+   
+    
+})
+
+
+export const Common = StyleSheet.create({
+    Full :{
         width:"100%",
         height:"100%",
-        backgroundColor:"#00ccff"
-    }  
+    },
+    Navbar:{
+        width:"100%",
+        height:"auto"
+    }
 })
