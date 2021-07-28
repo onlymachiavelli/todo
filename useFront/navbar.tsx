@@ -1,7 +1,7 @@
 import React from 'react'
-import {View, ScrollView, Dimensions, Text, TextInput} from 'react-native'
+import {View, ScrollView, Dimensions, Text, TextInput, TouchableOpacity} from 'react-native'
 import {HomeStyle, Common} from './../Packs/styles'
-import {Icon} from './../Packs/icons'
+import {Icon, Bars} from './../Packs/icons'
 
 const Navbar = () =>{
     return(
@@ -14,6 +14,14 @@ const Navbar = () =>{
                    
                    <View>
                     </View>
+                </View>
+
+                <View style={Common.ResContainer}>
+                    <TouchableOpacity onPress={()=>{}} style={Common.Button}>
+                        <Text>
+                            <Bars/>
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
     )

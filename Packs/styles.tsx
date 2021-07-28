@@ -37,6 +37,21 @@ export const Common = StyleSheet.create({
     },
     ResContainer:{
         position:"absolute",
+        right:15,
+        
+    },
+    Button:{
+        width:55,
+        height:55,
+        backgroundColor:"#9D3AC0",
+        borderRadius:50,
+        marginTop:10,
+        shadowColor:"#fff",
+        shadowRadius:1,
+        alignItems:"center",
+        justifyContent:"center",
+        
+
         
     }
 })
