@@ -20,6 +20,23 @@ export const Common = StyleSheet.create({
     },
     Navbar:{
         width:"100%",
-        height:"auto"
+        height:70,
+        marginTop:40,
+    },
+    Nvlogo:{
+        marginLeft:10,
+    },
+    Nvtext:{
+        color:"#fff",
+        marginLeft:70,
+        marginTop:-43,
+        fontWeight:"bold",
+        fontSize:19,
+        
+
+    },
+    ResContainer:{
+        position:"absolute",
+        
     }
 })
