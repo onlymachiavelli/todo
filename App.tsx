@@ -3,7 +3,7 @@ import React from 'react'
 import {  Text, View, TextInput } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import Home from './useFront/home'
+import Home from './src/Pages/home'
 const Pages = createStackNavigator()
 
 export default function App() {
