@@ -7,3 +7,5 @@ const Header = () =>{
         <View></View>
     )
 }
+
+export default Header
