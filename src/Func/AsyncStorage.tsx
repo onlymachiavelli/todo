@@ -41,3 +41,14 @@ export const clearStorage = async () =>{
 
 
 
+export const getAll = async () =>{
+    let keys = []
+    try{
+        keys =  AsyncStorage.getAllKeys()
+        return keys
+
+    }   
+    catch(e){
+        console.log(e)
+    }
+}
