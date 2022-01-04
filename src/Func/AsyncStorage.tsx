@@ -18,7 +18,7 @@ export const getData =async (key) =>{
         return res != null ? JSON.parse(res) : null
     }
     catch(e){
-        return null
+        console.log(e)
     }
 
 }
@@ -47,7 +47,7 @@ export const clearStorage = async () =>{
 export const getAll = async () =>{
     
     try{
-        let keys =  AsyncStorage.getAllKeys()
+        let keys =  await AsyncStorage.getAllKeys()
         return keys
 
     }   

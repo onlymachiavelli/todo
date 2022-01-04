@@ -3,6 +3,12 @@ import {View, Text}from 'react-native'
 import {homeStyle} from './../UI/Style'
 import {storeData , getData} from './../Func/AsyncStorage'
 
+
+const Empty = () =>{
+    return (
+        <View><Text>Nothing Here</Text></View>
+    )
+}
 const Home = () =>{
     storeData("tst",{name : "alaa", lname : "barka"})
     
@@ -13,18 +19,7 @@ const Home = () =>{
 
     return(
         <View style={homeStyle.container}>
-            <Text> 
-            {JSON.stringify(data)}
-            </Text>
-            <Text> 
-            {JSON.stringify(data)}
-            </Text>
-            <Text> 
-            {JSON.stringify(data)}
-            </Text>
-            <Text> 
-            {JSON.stringify(data)}
-            </Text>
+            
         </View>
     )
 
