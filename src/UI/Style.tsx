@@ -25,7 +25,7 @@ export const headerStyle = Style({
         paddingTop:10
     },
     textLogo:{
-        marginLeft:70,
+        marginLeft:60,
         marginTop:-43,
         color:"#fff",
         fontWeight:"bold",
@@ -39,12 +39,56 @@ export const headerStyle = Style({
         justifyContent:"center",
         paddingTop:-5,
         borderWidth:1,
-        borderColor:"#fff"
+        borderColor:"#fff",
+        shadowColor: "#fff",
+        shadowOffset: {
+            width: 3,
+            height: 12,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 16.00,
+        
+        elevation: 20,
     },
 
     buttonBlock:{
-        right:10,
+        right:8,
         top:20,
         position:"absolute"
     }
+})
+
+export const emptyStyle = Style({
+    container:{
+        
+        justifyContent: 'center', 
+        alignItems: 'center',
+        width:"80%",
+        height:"40%",
+        position:"absolute",
+        top:"20%",
+        alignSelf:"center",
+        transform:[{translateY:50}],
+        backgroundColor:Colors.purple,
+        borderRadius:10,
+        //borderWidth:1,
+        //borderColor:"#fff",
+        shadowColor: "#fff",
+        shadowOffset: {
+            width: 3,
+            height: 12,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 16.00,
+        
+        elevation: 20,
+    },
+    text:{
+        color:"#fff",
+        fontWeight:"bold",
+    }
+})
+
+export const addBtn = Style({
+    
 })

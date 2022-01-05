@@ -1,12 +1,27 @@
 import React ,{ useState } from 'react'
-import {View, Text}from 'react-native'
-import {homeStyle} from './../UI/Style'
-import {storeData , getData, getAll,clearStorage} from './../Func/AsyncStorage'
+import {View, Text, TouchableOpacity}from 'react-native'
+import {homeStyle, emptyStyle} from './../UI/Style'
+import {storeData , getData, getAll,clearStorage,} from './../Func/AsyncStorage'
 import Header from './../UI/Header'
+
+import {Rocket} from './../UI/SVG'
 
 const Empty = () =>{
     return (
-        <View><Text>Nothing Here</Text></View>
+        <View style={emptyStyle.container} elevation={5}>
+            <Rocket Width="180" Height="220" />
+            <Text style={emptyStyle.text}>NO TASKS</Text>
+        </View>
+    )
+}
+
+export const AddBtn = ({...props}) =>{
+    return (
+        <View>
+            <TouchableOpacity>
+               <Text>+</Text>
+            </TouchableOpacity>
+        </View>
     )
 }
 const Home = () =>{
@@ -28,6 +43,7 @@ const Home = () =>{
         <View style={homeStyle.container}>
             <Header/>
             {HomeComponent}
+            <AddBtn/>
         </View>
     )
 
