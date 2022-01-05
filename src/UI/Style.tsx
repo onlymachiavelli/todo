@@ -13,7 +13,8 @@ export const homeStyle = Style({
     container:{
         width : deviceWidth,
         height:deviceHeight,
-        backgroundColor:Colors.dark
+        backgroundColor:Colors.dark,
+        marginTop:35,
     }
 })
 
@@ -33,7 +34,7 @@ export const headerStyle = Style({
         width:50,
         height:50,
         backgroundColor:Colors.purple,
-        borderRadius:"50%",
+        borderRadius:50,
         alignItems:"center",
         justifyContent:"center",
         paddingTop:-5,
@@ -42,7 +43,7 @@ export const headerStyle = Style({
     },
 
     buttonBlock:{
-        right:20,
+        right:10,
         top:20,
         position:"absolute"
     }

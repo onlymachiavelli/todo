@@ -17,7 +17,7 @@ const Header = () =>{
             </View>
             <View style={headerStyle.buttonBlock}>
                 <TouchableOpacity style={headerStyle.Button} onPress={()=>{}}>
-                    <Bars Width="20" Height="20"  />
+                    <Bars Width="15" Height="15"  />
                 </TouchableOpacity> 
             </View>
         </View>
