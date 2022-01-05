@@ -22,7 +22,7 @@ export const headerStyle = Style({
     container:{
         width:"100%",
         height:"auto",
-        paddingTop:10
+        paddingTop:10,
     },
     textLogo:{
         marginLeft:60,
@@ -65,10 +65,11 @@ export const emptyStyle = Style({
         alignItems: 'center',
         width:"80%",
         height:"40%",
-        position:"absolute",
-        top:"20%",
+        marginTop:"17%",
+        //position:"absolute",
+        //top:"20%",
         alignSelf:"center",
-        transform:[{translateY:50}],
+        //transform:[{translateY:50}],
         backgroundColor:Colors.purple,
         borderRadius:10,
         //borderWidth:1,
@@ -90,5 +91,36 @@ export const emptyStyle = Style({
 })
 
 export const addBtn = Style({
+    container:{
+        width:"100%",
+        height:"auto",
+        alignItems:"center",
+        marginTop:30,
+    },
+    Button:{
+        width:70,
+        height:70,
+        backgroundColor:Colors.purple,
+        alignItems:"center",
+        justifyContent:"center",
+        borderRadius:50,
+        shadowColor: "#fff",
+        shadowOffset: {
+            width: 3,
+            height: 12,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 16.00,
+        borderWidth:1,
+        borderColor:"#fff",
+    },
+    Text:{
+        color:"#fff",
+        fontWeight:"bold",
+        fontSize:30,
+    }
+})
 
+export const addNoteStyle = Style({
+    
 })

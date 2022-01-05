@@ -32,7 +32,6 @@ export const deleteItem = async (key:string) =>{
     }
 }
 
-
 export const clearStorage = async () =>{
     try{
         await AsyncStorage.clear()

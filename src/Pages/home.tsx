@@ -1,6 +1,6 @@
 import React ,{ useState } from 'react'
 import {View, Text, TouchableOpacity}from 'react-native'
-import {homeStyle, emptyStyle} from './../UI/Style'
+import {homeStyle, emptyStyle, addBtn} from './../UI/Style'
 import {storeData , getData, getAll,clearStorage,} from './../Func/AsyncStorage'
 import Header from './../UI/Header'
 
@@ -17,9 +17,9 @@ const Empty = () =>{
 
 export const AddBtn = ({...props}) =>{
     return (
-        <View>
-            <TouchableOpacity>
-               <Text>+</Text>
+        <View style={addBtn.container}>
+            <TouchableOpacity style={addBtn.Button}>
+               <Text style={addBtn.Text}>+</Text>
             </TouchableOpacity>
         </View>
     )
