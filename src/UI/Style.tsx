@@ -15,6 +15,11 @@ export const homeStyle = Style({
         height:deviceHeight,
         backgroundColor:Colors.dark,
         marginTop:35,
+    },
+    Title:{
+        color:"#fff",
+        fontWeight:"bold",
+
     }
 })
 
@@ -31,8 +36,8 @@ export const headerStyle = Style({
         fontWeight:"bold",
     },
     Button:{
-        width:50,
-        height:50,
+        width:45,
+        height:45,
         backgroundColor:Colors.purple,
         borderRadius:50,
         alignItems:"center",
@@ -87,7 +92,8 @@ export const emptyStyle = Style({
     text:{
         color:"#fff",
         fontWeight:"bold",
-    }
+    },
+    
 })
 
 export const addBtn = Style({
