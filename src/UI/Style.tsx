@@ -17,6 +17,28 @@ export const homeStyle = Style({
     }
 })
 
-export const Header = Style({
+export const headerStyle = Style({
+    container:{
+        width:"100%",
+        height:"auto",
+        
+    },
+    Text:{
+        color:"#fff",
+        fontWeight:"bold",
+    },
+    start_flex:{
+        alignSelf:"flex-start"
+    },
+    end_flex:{
+        alignSelf:"flex-end"
+    },
 
+    logo:{
+        flexDirection:"row",
+        flexWrap:"wrap",
+        flex:1,
+        justifyContent:"space-between",
+        width:"20%",
+    }
 })
