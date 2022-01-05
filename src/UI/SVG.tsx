@@ -6,7 +6,7 @@ import {Svg, Path} from 'react-native-svg'
 export const Rocket = ({...props}) =>{
     return (
         
-    <Svg width={props.Width} height={props.Height} viewBox="0 0 59 67" fill="none" xmlns="http://Www.w3.org/2000/Svg">
+    <Svg width={props.Width} height={props.Height} style={props.Style} viewBox="0 0 59 67" fill="none" xmlns="http://Www.w3.org/2000/Svg">
         <Path d="M38.4795 11.7483L41.0665 16.5732L41.0665 50.974H34.3486L34.5846 19.3174L38.4795 11.7483Z" fill="#D0CFCE"/>
         <Path d="M20.6336 11.9809L17.827 16.4522L17.827 50.8521L24.635 50.5115L24.2826 19.5603L20.6336 11.9809Z" fill="#D0CFCE"/>
         <Path d="M23.2025 53.4493C23.2025 53.4493 24.235 23.7664 24.0302 16.3229C23.8335 9.2246 29.4713 5.65406 29.4713 5.65406C29.4713 5.65406 35.1091 9.2246 34.9124 16.3229C34.7075 23.7664 35.74 53.4493 35.74 53.4493H23.2025Z" fill="#BC47E6"/>

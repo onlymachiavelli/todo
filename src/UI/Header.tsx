@@ -4,10 +4,10 @@ import { View, Text} from 'react-native'
 import {Rocket} from './SVG'
 const Header = () =>{
     return (
-        <View>
+        <View style={headerStyle.container}>
             <View>
                 <Rocket Width="59" Height="67" /> 
-                <Text style={headerStyle.Text}>TODO APP</Text>
+                <Text style={ headerStyle.textLogo}>TODO APP</Text>
             </View>
         </View>
     )

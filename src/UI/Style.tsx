@@ -21,24 +21,13 @@ export const headerStyle = Style({
     container:{
         width:"100%",
         height:"auto",
-        
+        paddingTop:10
     },
-    Text:{
+    textLogo:{
+        marginLeft:70,
+        marginTop:-43,
         color:"#fff",
         fontWeight:"bold",
     },
-    start_flex:{
-        alignSelf:"flex-start"
-    },
-    end_flex:{
-        alignSelf:"flex-end"
-    },
 
-    logo:{
-        flexDirection:"row",
-        flexWrap:"wrap",
-        flex:1,
-        justifyContent:"space-between",
-        width:"20%",
-    }
 })
