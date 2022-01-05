@@ -8,7 +8,7 @@ const Colors = {
     purple : "#9D3AC0" , 
     dark : "#1F1F1F" 
 }
-const Style = (styleDatas) =>  StyleSheet.create(styleDatas)
+const Style = (styleDatas:object) =>  StyleSheet.create(styleDatas)
 export const homeStyle = Style({
     container:{
         width : deviceWidth,
@@ -90,5 +90,5 @@ export const emptyStyle = Style({
 })
 
 export const addBtn = Style({
-    
+
 })
