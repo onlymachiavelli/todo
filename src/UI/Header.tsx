@@ -1,7 +1,7 @@
 import React , {useState, useEffect} from 'react' 
 import {headerStyle} from './Style'
 import { View, Text, TouchableOpacity} from 'react-native'
-import {Rocket} from './SVG'
+import {Rocket, Bars} from './SVG'
 export const headerVisibility = () =>{
     const [visible, setVis] = useState(false)
     useEffect(()=>{
@@ -17,8 +17,8 @@ const Header = () =>{
             </View>
             <View style={headerStyle.buttonBlock}>
                 <TouchableOpacity style={headerStyle.Button} onPress={()=>{}}>
-                    
-                </TouchableOpacity>
+                    <Bars Width="20" Height="20"  />
+                </TouchableOpacity> 
             </View>
         </View>
     )

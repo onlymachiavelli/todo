@@ -29,5 +29,21 @@ export const headerStyle = Style({
         color:"#fff",
         fontWeight:"bold",
     },
+    Button:{
+        width:50,
+        height:50,
+        backgroundColor:Colors.purple,
+        borderRadius:"50%",
+        alignItems:"center",
+        justifyContent:"center",
+        paddingTop:-5,
+        borderWidth:1,
+        borderColor:"#fff"
+    },
 
+    buttonBlock:{
+        right:20,
+        top:20,
+        position:"absolute"
+    }
 })
