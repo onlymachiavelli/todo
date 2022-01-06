@@ -146,7 +146,8 @@ export const addNoteStyle = Style({
         borderRadius:50,
         paddingBottom:10,
         borderWidth:1,
-        borderColor:Colors.purple
+        borderColor:Colors.purple,
+        
     },
     SVG:{
         marginLeft:20,
@@ -166,11 +167,16 @@ export const addNoteStyle = Style({
         backgroundColor:Colors.darkPurple,
         marginTop:20,
         alignItems:"center",
+        paddingBottom:20,
+        
     },
     txtArea:{
         fontWeight:"600",
         width:"90%",
         color:"#fff",
-        
+        height:"auto",
+        padding:10,
+        borderBottomWidth:1,
+        borderColor:"#fff",
     }
 })

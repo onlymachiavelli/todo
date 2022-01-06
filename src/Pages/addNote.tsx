@@ -1,8 +1,8 @@
 import React, {} from 'react'
 
-import {View, Text, TouchableOpacity, TextInput} from 'react-native'
+import {View, Text, TouchableOpacity, TextInput, TextBase} from 'react-native'
 import {homeStyle, addNoteStyle} from './../UI/Style'
-import {Pen} from './../UI/SVG'
+import {Pen, Details} from './../UI/SVG'
 import Header from '../UI/Header'
 
 const StoreData  = ():void =>{
@@ -23,7 +23,11 @@ const AddNoteData = () =>{
                 </View>
 
                 <View style={addNoteStyle.textArea}> 
-                    <TextInput style={addNoteStyle.txtArea} placeholder='WRITE THE DETAILS HERE' placeholderTextColor={"#fff"} />
+                <View>
+                    <Details Width="28" Height="21" />
+                    <Text>ADD SOME DETAILS</Text>   
+                </View>
+                    <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline  />
                 </View>
             </View>
         </View>
