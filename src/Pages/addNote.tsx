@@ -20,8 +20,8 @@ const AddNoteData = () =>{
                     <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} onChange={()=>{}} style={addNoteStyle.textInput}/>
                 </View>
 
-                <View > 
-                    <TextInput placeholder='DETAILS' placeholderTextColor={"#fff"} />
+                <View style={addNoteStyle.textArea}> 
+                    <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' placeholderTextColor={"//#endregionfff"} />
                 </View>
             </View>
         </View>

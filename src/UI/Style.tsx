@@ -164,9 +164,12 @@ export const addNoteStyle = Style({
         width:"85%",
         height:"auto",
         backgroundColor:Colors.darkPurple,
-
+        marginTop:20,
+        alignItems:"center",
     },
     txtArea:{
-
+        fontWeight:"600",
+        width:"90%",
+        
     }
 })
