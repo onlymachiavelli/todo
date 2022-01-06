@@ -145,6 +145,8 @@ export const addNoteStyle = Style({
         justifyContent:"center",
         borderRadius:50,
         paddingBottom:10,
+        borderWidth:1,
+        borderColor:Colors.purple
     },
     SVG:{
         marginLeft:20,
@@ -156,5 +158,15 @@ export const addNoteStyle = Style({
         marginLeft:50,
         marginTop:-24,
         fontWeight:"600"
+    },
+    //the block !
+    textArea:{
+        width:"85%",
+        height:"auto",
+        backgroundColor:Colors.darkPurple,
+
+    },
+    txtArea:{
+
     }
 })

@@ -19,6 +19,10 @@ const AddNoteData = () =>{
                     <Pen Width="21" Height="21" Style={addNoteStyle.SVG} />
                     <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} onChange={()=>{}} style={addNoteStyle.textInput}/>
                 </View>
+
+                <View > 
+                    <TextInput placeholder='DETAILS' placeholderTextColor={"#fff"} />
+                </View>
             </View>
         </View>
     )
