@@ -19,6 +19,9 @@ export const homeStyle = Style({
     Title:{
         color:"#fff",
         fontWeight:"bold",
+        marginTop:40,
+        fontSize:30,
+        textAlign:"center"
 
     }
 })
@@ -70,7 +73,7 @@ export const emptyStyle = Style({
         alignItems: 'center',
         width:"80%",
         height:"40%",
-        marginTop:"17%",
+        marginTop:"9%",
         //position:"absolute",
         //top:"20%",
         alignSelf:"center",

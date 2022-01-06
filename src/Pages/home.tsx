@@ -45,7 +45,7 @@ const Home = ({navigation}) =>{
     return(
         <View style={homeStyle.container}>
             <Header/>
-                <Text style={headerStyle.Title}>Current Tasks</Text>
+                <Text style={homeStyle.Title}>CURRENT TASKS : {size}</Text>
                 {HomeComponent}
             <AddBtn Travel={()=>{
                 navigation.navigate(AddNoteData)
