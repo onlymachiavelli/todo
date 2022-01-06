@@ -5,7 +5,9 @@ import {homeStyle, addNoteStyle} from './../UI/Style'
 import {Pen} from './../UI/SVG'
 import Header from '../UI/Header'
 
-
+const StoreData  = ():void =>{
+    
+}
 const AddNoteData = () =>{
     return (
         <View style={homeStyle.container}>
@@ -21,7 +23,7 @@ const AddNoteData = () =>{
                 </View>
 
                 <View style={addNoteStyle.textArea}> 
-                    <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' placeholderTextColor={"//#endregionfff"} />
+                    <TextInput style={addNoteStyle.txtArea} placeholder='WRITE THE DETAILS HERE' placeholderTextColor={"#fff"} />
                 </View>
             </View>
         </View>

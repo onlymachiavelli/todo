@@ -170,6 +170,7 @@ export const addNoteStyle = Style({
     txtArea:{
         fontWeight:"600",
         width:"90%",
+        color:"#fff",
         
     }
 })
