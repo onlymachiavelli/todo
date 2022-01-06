@@ -6,7 +6,8 @@ const deviceHeight = Dimensions.get("screen").height
 
 const Colors = {
     purple : "#9D3AC0" , 
-    dark : "#1F1F1F" 
+    dark : "#1F1F1F" ,
+    darkPurple:"#542265"
 }
 const Style = (styleDatas:object) =>  StyleSheet.create(styleDatas)
 export const homeStyle = Style({
@@ -131,5 +132,29 @@ export const addBtn = Style({
 })
 
 export const addNoteStyle = Style({
-    
+    Form:{
+        width:"100%",
+        alignItems:"center",
+        justifyContent:"center",
+        marginTop:20,
+    },
+    Input:{
+        width:"85%",
+        height:"auto",
+        backgroundColor:Colors.darkPurple,
+        justifyContent:"center",
+        borderRadius:50,
+        paddingBottom:10,
+    },
+    SVG:{
+        marginLeft:20,
+        marginTop:13,
+    },
+    textInput:{
+        color:"#fff",
+        width:"76%",
+        marginLeft:50,
+        marginTop:-24,
+        fontWeight:"600"
+    }
 })

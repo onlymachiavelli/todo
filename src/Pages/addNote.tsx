@@ -1,7 +1,7 @@
 import React, {} from 'react'
 
 import {View, Text, TouchableOpacity, TextInput} from 'react-native'
-import {homeStyle} from './../UI/Style'
+import {homeStyle, addNoteStyle} from './../UI/Style'
 import {Pen} from './../UI/SVG'
 import Header from '../UI/Header'
 
@@ -14,10 +14,10 @@ const AddNoteData = () =>{
                 ADD TODO
             </Text>
 
-            <View>
-                <View> 
-                    <Pen Width="21" Height="21" />
-                    <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} onChange={()=>{}}/>
+            <View style={addNoteStyle.Form} >
+                <View style={addNoteStyle.Input} > 
+                    <Pen Width="21" Height="21" Style={addNoteStyle.SVG} />
+                    <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} onChange={()=>{}} style={addNoteStyle.textInput}/>
                 </View>
             </View>
         </View>
