@@ -1,6 +1,6 @@
 import React, {} from 'react'
 
-import {View, Text, TouchableOpacity, TextInput, TextBase} from 'react-native'
+import {View, Text, TouchableOpacity, TextInput, ScrollView} from 'react-native'
 import {homeStyle, addNoteStyle} from './../UI/Style'
 import {Pen, Details} from './../UI/SVG'
 import Header from '../UI/Header'
@@ -27,7 +27,11 @@ const AddNoteData = () =>{
                     <Details Width="28" Height="21" />
                     <Text>ADD SOME DETAILS</Text>   
                 </View>
-                    <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline  />
+                <ScrollView style={addNoteStyle.Scroll}>
+                    <View style={{width:"100%",height:"auto",alignItems:"center"}}>
+                        <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline  />
+                    </View>                
+                </ScrollView>
                 </View>
             </View>
         </View>

@@ -166,8 +166,11 @@ export const addNoteStyle = Style({
         height:"auto",
         backgroundColor:Colors.darkPurple,
         marginTop:20,
-        alignItems:"center",
         paddingBottom:20,
+        borderWidth:1,
+        borderColor:Colors.purple,
+        borderRadius:10,
+        paddingTop:10
         
     },
     txtArea:{
@@ -178,5 +181,14 @@ export const addNoteStyle = Style({
         padding:10,
         borderBottomWidth:1,
         borderColor:"#fff",
+        
+    },
+    txtTitle:{
+        color:"#fff",
+
+    },
+    Scroll:{
+        width:"100%",
+        height:"auto",
     }
 })
