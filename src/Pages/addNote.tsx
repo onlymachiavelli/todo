@@ -24,8 +24,8 @@ const AddNoteData = () =>{
 
                 <View style={addNoteStyle.textArea}> 
                 <View>
-                    <Details Width="28" Height="21" />
-                    <Text>ADD SOME DETAILS</Text>   
+                    <Details Width="28" Height="21" Style={addNoteStyle.SvG} />
+                    <Text style={addNoteStyle.t}>ADD SOME DETAILS</Text>   
                 </View>
                 <ScrollView style={addNoteStyle.Scroll}>
                     <View style={{width:"100%",height:"auto",alignItems:"center"}}>

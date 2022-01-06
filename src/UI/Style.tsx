@@ -163,7 +163,7 @@ export const addNoteStyle = Style({
     //the block !
     textArea:{
         width:"85%",
-        height:"auto",
+        height:300,
         backgroundColor:Colors.darkPurple,
         marginTop:20,
         paddingBottom:20,
@@ -181,6 +181,7 @@ export const addNoteStyle = Style({
         padding:10,
         borderBottomWidth:1,
         borderColor:"#fff",
+        marginTop:20
         
     },
     txtTitle:{
@@ -190,5 +191,14 @@ export const addNoteStyle = Style({
     Scroll:{
         width:"100%",
         height:"auto",
+    },
+    SvG:{
+        marginLeft:10
+    },
+    t:{
+        color:"#fff",
+        fontWeight:"600",
+        marginLeft:45,
+        marginTop:-19,
     }
 })
