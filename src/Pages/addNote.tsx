@@ -1,15 +1,26 @@
-import React, {} from 'react'
+import React, { useState } from 'react'
 
 import {View, Text, TouchableOpacity, TextInput, ScrollView} from 'react-native'
 import {homeStyle, addNoteStyle} from './../UI/Style'
 import {Pen, Details, X} from './../UI/SVG'
 import Header from '../UI/Header'
 import home from './home'
-
-const StoreData  = ():void =>{
+import { getData, storeData } from '../Func/AsyncStorage'
+const StoreData  = (taskTitle:any, taskDetails:any):void =>{
+    //get the datas 
+    const [datas, setDatas] = useState([])
+    getData("todoTask").then(
+        (res)=>{
+            res ? setDatas(res) : setDatas(datas)
+        }
+    )
     
 }
 const AddNoteData = ({navigation}) =>{
+    const [taskTitle, setTask] = useState("")
+    const [details, setDetails] = useState("")
+
+
     return (
         <View style={homeStyle.container}>
             <Header/>
@@ -20,7 +31,11 @@ const AddNoteData = ({navigation}) =>{
             <View style={addNoteStyle.Form} >
                 <View style={addNoteStyle.Input} > 
                     <Pen Width="21" Height="21" Style={addNoteStyle.SVG} />
-                    <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} onChange={()=>{}} style={addNoteStyle.textInput}/>
+                    <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} value={taskTitle}  onChange={
+                            (e)=>{
+                                setTask(e.target.value)
+                            }
+                        } style={addNoteStyle.textInput}/>
                 </View>
 
                 <View style={addNoteStyle.textArea}> 
@@ -30,7 +45,11 @@ const AddNoteData = ({navigation}) =>{
                     </View>
                     <ScrollView style={addNoteStyle.Scroll}>
                         <View style={{width:"100%",height:"auto",alignItems:"center"}}>
-                            <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13}  />
+                            <TextInput style={addNoteStyle.txtArea}  placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13} value={details} onChange={
+                                e=>{
+                                    setDetails(e.target.value)
+                                }
+                            } />
                         </View>                
                     </ScrollView>
                 </View>
@@ -39,7 +58,8 @@ const AddNoteData = ({navigation}) =>{
                 </TouchableOpacity>
 
                 <TouchableOpacity style={addNoteStyle.cancelBtn} onPress={()=>{
-                    navigation.navigate(home)
+                    alert(taskTitle)
+                    //navigation.navigate(home)
                 }}>
                     <X Width="20" Height="20" />
                 </TouchableOpacity>

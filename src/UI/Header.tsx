@@ -2,7 +2,7 @@ import React , {useState, useEffect} from 'react'
 import {headerStyle} from './Style'
 import { View, Text, TouchableOpacity} from 'react-native'
 import {Rocket, Bars} from './SVG'
-export const headerVisibility = () =>{
+export const headerVisibility = ():void =>{
     const [visible, setVis] = useState(false)
     useEffect(()=>{
 
