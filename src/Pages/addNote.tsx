@@ -32,7 +32,9 @@ const AddNoteData = ({navigation}) =>{
                 <View style={addNoteStyle.Input} > 
                     <Pen Width="21" Height="21" Style={addNoteStyle.SVG} />
                     <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} value={taskTitle}  onChange={
-                            (e)=>{
+                            (e:any)=>{
+                                console.log(taskTitle +"A"+ details);
+                                
                                 setTask(e.target.value)
                             }
                         } style={addNoteStyle.textInput}/>
@@ -46,7 +48,7 @@ const AddNoteData = ({navigation}) =>{
                     <ScrollView style={addNoteStyle.Scroll}>
                         <View style={{width:"100%",height:"auto",alignItems:"center"}}>
                             <TextInput style={addNoteStyle.txtArea}  placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13} value={details} onChange={
-                                e=>{
+                                (e:any)=>{
                                     setDetails(e.target.value)
                                 }
                             } />
@@ -58,8 +60,8 @@ const AddNoteData = ({navigation}) =>{
                 </TouchableOpacity>
 
                 <TouchableOpacity style={addNoteStyle.cancelBtn} onPress={()=>{
-                    alert(taskTitle)
-                    //navigation.navigate(home)
+                    //alert(taskTitle)
+                    navigation.navigate(home)
                 }}>
                     <X Width="20" Height="20" />
                 </TouchableOpacity>
