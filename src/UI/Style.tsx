@@ -236,9 +236,5 @@ export const addNoteStyle = Style({
 
 
     },
-    cancelTxt:{
-        color:"#fff",
-        fontWeight:"bold",
-        fontSize:20
-    }
+
 })

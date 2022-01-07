@@ -2,13 +2,14 @@ import React, {} from 'react'
 
 import {View, Text, TouchableOpacity, TextInput, ScrollView} from 'react-native'
 import {homeStyle, addNoteStyle} from './../UI/Style'
-import {Pen, Details} from './../UI/SVG'
+import {Pen, Details, X} from './../UI/SVG'
 import Header from '../UI/Header'
+import home from './home'
 
 const StoreData  = ():void =>{
     
 }
-const AddNoteData = () =>{
+const AddNoteData = ({navigation}) =>{
     return (
         <View style={homeStyle.container}>
             <Header/>
@@ -37,8 +38,10 @@ const AddNoteData = () =>{
                     <Text style={addNoteStyle.textButton}>ADD DATA</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={addNoteStyle.cancelBtn}>
-                    <Text style={addNoteStyle.cancelTxt}>X</Text>
+                <TouchableOpacity style={addNoteStyle.cancelBtn} onPress={()=>{
+                    navigation.navigate(home)
+                }}>
+                    <X Width="20" Height="20" />
                 </TouchableOpacity>
             </View>
         </View>
