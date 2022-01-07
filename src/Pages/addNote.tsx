@@ -23,16 +23,23 @@ const AddNoteData = () =>{
                 </View>
 
                 <View style={addNoteStyle.textArea}> 
-                <View>
-                    <Details Width="28" Height="21" Style={addNoteStyle.SvG} />
-                    <Text style={addNoteStyle.t}>ADD SOME DETAILS</Text>   
+                    <View>
+                        <Details Width="28" Height="21" Style={addNoteStyle.SvG} />
+                        <Text style={addNoteStyle.t}>ADD SOME DETAILS</Text>   
+                    </View>
+                    <ScrollView style={addNoteStyle.Scroll}>
+                        <View style={{width:"100%",height:"auto",alignItems:"center"}}>
+                            <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13}  />
+                        </View>                
+                    </ScrollView>
                 </View>
-                <ScrollView style={addNoteStyle.Scroll}>
-                    <View style={{width:"100%",height:"auto",alignItems:"center"}}>
-                        <TextInput style={addNoteStyle.txtArea} placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline  />
-                    </View>                
-                </ScrollView>
-                </View>
+                <TouchableOpacity style={addNoteStyle.button}>
+                    <Text style={addNoteStyle.textButton}>ADD DATA</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={addNoteStyle.cancelBtn}>
+                    <Text style={addNoteStyle.cancelTxt}>X</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
