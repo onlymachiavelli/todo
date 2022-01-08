@@ -43,13 +43,44 @@ const MyTasks = ({...props}) =>{
             Details:"Im going to fuck your bitch until you die",
             isDone:true
         },
+        {
+            taskTitle:"fucking your bitch6",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
+        {
+            taskTitle:"fucking your bitch7",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
+        {
+            taskTitle:"fucking your bitch8",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
+        {
+            taskTitle:"fucking your bitch9",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
+        {
+            taskTitle:"fucking your bitch10",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
+        {
+            taskTitle:"fucking your bitch11",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:true
+        },
     ]
 
    
     return (
         <View style={currentTask.container}>
+            <ScrollView style={{width:"100%",}}>
             {
-                Datas.reduce((acc:any, curr)=>[curr,...acc],[]).map(
+                Datas.reduce((acc:any, curr:any)=>[curr,...acc],[]).map(
                     
                     (res:any, ind:any) =>{
                         return(
@@ -58,6 +89,7 @@ const MyTasks = ({...props}) =>{
                     }
                  )
             }
+            </ScrollView>
         </View>
     )
 }

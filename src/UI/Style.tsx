@@ -247,6 +247,7 @@ export const currentTask = Style({
         marginTop:25,
         alignItems:"center",
         justifyContent:"center",
+        textAlign:"center"
     },
     txt:{
         color:"#fff",
