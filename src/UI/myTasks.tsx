@@ -1,7 +1,7 @@
 import React, {} from 'react'
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native'
 
-import {Bars, } from './SVG'
+import {Bars,Trash } from './SVG'
 import {currentTask, taskStyle} from './Style'
 export const Task = ({...props}) =>{
     return(
@@ -9,58 +9,55 @@ export const Task = ({...props}) =>{
             <TouchableOpacity onPress={()=>{alert("Hello world")}}>
                 <Bars Width="20" Height="20" />
             </TouchableOpacity>
-            <Text style={currentTask.txt} >Hello world</Text>
+            <Text style={currentTask.txt} >{props.TaskName}</Text>
+            <TouchableOpacity style={currentTask.trashIcon}>
+                <Trash Width="20" Height="80" />
+            </TouchableOpacity>
         </View>
     )
 }
 const MyTasks = ({...props}) =>{
     const Datas = [
         {
-            taskTitle:"fucking your bitch",
+            taskTitle:"fucking your bitch1",
             Details:"Im going to fuck your bitch until you die",
             isDone:false
         },
         {
-            taskTitle:"fucking your bitch",
+            taskTitle:"fucking your bitch2",
             Details:"Im going to fuck your bitch until you die",
             isDone:true
         },
         {
-            taskTitle:"fucking your bitch",
+            taskTitle:"fucking your bitch3",
             Details:"Im going to fuck your bitch until you die",
             isDone:false
         },
         {
-            taskTitle:"fucking your bitch",
+            taskTitle:"fucking your bitch4",
             Details:"Im going to fuck your bitch until you die",
             isDone:false
         },
         {
-            taskTitle:"fucking your bitch",
+            taskTitle:"fucking your bitch5",
             Details:"Im going to fuck your bitch until you die",
             isDone:true
         },
     ]
 
-    /*
-    
-    {
-                Datas.reduce((acc:any, curr:any)=>[curr,acc],[]).map(
+   
+    return (
+        <View style={currentTask.container}>
+            {
+                Datas.reduce((acc:any, curr)=>[curr,...acc],[]).map(
                     
-                    (res, ind) =>{
+                    (res:any, ind:any) =>{
                         return(
-                            <View>
-                                <Text></Text>
-                            </View>
+                            <Task TaskName={res.taskTitle} />
                         )
                     }
                  )
             }
-    */ 
-   
-    return (
-        <View style={currentTask.container}>
-        <Task/>
         </View>
     )
 }
