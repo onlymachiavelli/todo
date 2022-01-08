@@ -239,9 +239,28 @@ export const addNoteStyle = Style({
 
 })
 
-const currentTask = Style({
+export const currentTask = Style({
     container:{
-
+        width:"100%",
+        maxHeight:"60%",
+        height:"auto",
+        marginTop:20,
+        alignItems:"center",
+        justifyContent:"center",
     },
     
+
 })
+
+export const taskStyle = (color:any) =>{
+    let style = Style({
+        TaskBlock:{
+            width:"90%",
+            height:70,
+            backgroundColor:Colors.purple,
+        
+            }   
+    })
+
+    return style
+}

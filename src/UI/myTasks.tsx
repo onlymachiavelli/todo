@@ -2,7 +2,14 @@ import React, {} from 'react'
 import {View, Text} from 'react-native'
 
 import {} from './SVG'
-import {currentTask} from './Style'
+import {currentTask, taskStyle} from './Style'
+export const Task = ({...props}) =>{
+    return(
+        <View style={[currentTask.TaskBlock , taskStyle("").TaskBlock]}>
+
+        </View>
+    )
+}
 const MyTasks = ({...props}) =>{
     const Datas = [
         {
@@ -31,8 +38,27 @@ const MyTasks = ({...props}) =>{
             isDone:true
         },
     ]
+
+    /*
+    
+    {
+                Datas.reduce((acc:any, curr:any)=>[curr,acc],[]).map(
+                    
+                    (res, ind) =>{
+                        return(
+                            <View>
+                                <Text></Text>
+                            </View>
+                        )
+                    }
+                 )
+            }
+    */ 
+   
     return (
-        <View></View>
+        <View style={currentTask.container}>
+        <Task/>
+        </View>
     )
 }
 
