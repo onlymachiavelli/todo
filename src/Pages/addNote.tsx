@@ -28,6 +28,7 @@ const AddNoteData = ({navigation}) =>{
             }
         ).catch(
            
+           //
             )
         
     }
@@ -41,11 +42,11 @@ const AddNoteData = ({navigation}) =>{
             <View style={addNoteStyle.Form} >
                 <View style={addNoteStyle.Input} > 
                     <Pen Width="21" Height="21" Style={addNoteStyle.SVG} />
-                    <TextInput placeholder='YOUR TASK' placeholderTextColor={"#fff"} value={taskTitle}  onChange={
+                    <TextInput value={taskTitle} placeholder='YOUR TASK' placeholderTextColor={"#fff"}   onChangeText={
                             (e:any)=>{
                                 console.log(taskTitle +"A"+ details);
                                 
-                                setTask(e.target.value)
+                                setTask(e)
                             }
                         } style={addNoteStyle.textInput}/>
                 </View>
@@ -57,9 +58,9 @@ const AddNoteData = ({navigation}) =>{
                     </View>
                     <ScrollView style={addNoteStyle.Scroll}>
                         <View style={{width:"100%",height:"auto",alignItems:"center"}}>
-                            <TextInput style={addNoteStyle.txtArea}  placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13} value={details} onChange={
+                            <TextInput style={addNoteStyle.txtArea}  placeholder='DETAILS' editable placeholderTextColor={"#fff"} multiline numberOfLines={13} value={details} onChangeText={
                                 (e:any)=>{
-                                    setDetails(e.target.value)
+                                    setDetails(e)
                                 }
                             } />
                         </View>                

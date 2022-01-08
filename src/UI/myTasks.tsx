@@ -17,7 +17,10 @@ export const Task = ({...props}) =>{
         </View>
     )
 }
-
+/*
+taskTitle:task,
+                    taskDetails:detail,
+                    isDone:false */
 
 const MyTasks = ({...props}) =>{
 

@@ -36,7 +36,7 @@ const Home = ({navigation}) =>{
     useEffect(()=>{
         getData("todoTask").then((res:any)=>{
             let len = res.length
-            setDatas(len>0 ? res : datas)
+            setDatas(len > 0 ? res : datas)
             
            setSize(len)
         })

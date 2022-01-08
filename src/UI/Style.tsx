@@ -242,7 +242,7 @@ export const addNoteStyle = Style({
 export const currentTask = Style({
     container:{
         width:"100%",
-        maxHeight:"62%",
+        maxHeight:"60%",
         height:"auto",
         marginTop:25,
         alignItems:"center",
