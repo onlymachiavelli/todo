@@ -19,14 +19,15 @@ export const putIn  = (task:any, detail:any):void =>{
     getData("todoTask").then(
         (res)=>{
             datas = res
+            datas.push({
+                taskTitle:task,
+                taskDetails:detail
+            })
+            storeData("todoTask",datas)
+                
         }
     )
-    datas.push({
-        taskTitle:task,
-        taskDetails:detail
-    })
-    storeData("todoTask",datas)
-        
+    
 }
 const AddNoteData = ({navigation}) =>{
     const [taskTitle, setTask] = useState("")
