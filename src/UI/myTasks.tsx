@@ -16,82 +16,35 @@ export const Task = ({...props}) =>{
         </View>
     )
 }
-const MyTasks = ({...props}) =>{
-    const Datas = [
-        {
+
+/*
+{
             taskTitle:"fucking your bitch1",
             Details:"Im going to fuck your bitch until you die",
             isDone:false
         },
-        {
-            taskTitle:"fucking your bitch2",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch3",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:false
-        },
-        {
-            taskTitle:"fucking your bitch4",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:false
-        },
-        {
-            taskTitle:"fucking your bitch5",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch6",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch7",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch8",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch9",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch10",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-        {
-            taskTitle:"fucking your bitch11",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:true
-        },
-    ]
+*/
+const MyTasks = ({...props}) =>{
 
+    const Datas = props.datas
    
     return (
         <View style={currentTask.container}>
-            <View style={{width:"100%" , alignItems:"center",}}>
                 <ScrollView style={{width:"100%",height:"100%"}}>
-                {
-                    Datas.reduce((acc:any, curr:any)=>[curr,...acc],[]).map(
-                        
-                        (res:any, ind:any) =>{
-                            return(
-                                <Task TaskName={res.taskTitle} isChecked={res.isDone} />
-                            )
-                        }
-                    )
-                }
+                    <View style={{width:"100%",height:"auto", alignItems:"center"}}>
+                        {
+                        Datas.reduce((acc:any, curr:any)=>[curr,...acc],[]).map(
+                            
+                            (res:any, ind:any) =>{
+                                return(
+                                    <Task TaskName={res.taskTitle} isChecked={res.isDone} />
+                                )
+                            }
+                        )
+                    }
+                    </View>
+
                 </ScrollView>
-            </View>
         </View>
     )
 }

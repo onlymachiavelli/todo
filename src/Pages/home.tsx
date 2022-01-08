@@ -36,23 +36,16 @@ const Home = ({navigation}) =>{
         setSize(len)
      })
      let HomeComponent 
-     if (size === 0) {
-        HomeComponent = <Empty/>
-     } 
-     else {
-
-     }
-
+  
+     size === 0 ? HomeComponent = <Empty/> : <MyTasks/>
+     
 
     return(
         <View style={homeStyle.container}>
             <Header/>
                 <Text style={homeStyle.Title}>CURRENT TASKS : {size}</Text>
-                {
-                //HomeComponent
-                }
+                {HomeComponent}
 
-                <MyTasks />
             <AddBtn Travel={()=>{
                 navigation.navigate(AddNoteData)
             }}/>

@@ -247,10 +247,11 @@ export const currentTask = Style({
         marginTop:25,
         alignItems:"center",
         justifyContent:"center",
-        textAlign:"center",
-        backgroundColor:"#242a2e",
+        backgroundColor:"#111",
         paddingTop:10,
         paddingBottom:20,
+        flex:1,
+        
     },
     txt:{
         color:"#fff",
@@ -262,7 +263,8 @@ export const currentTask = Style({
     trashIcon:{
         position:"absolute",
         right:20,
-    }
+    },
+
 
 })
 
@@ -274,7 +276,7 @@ export const taskStyle = (color:boolean) =>{
             backgroundColor: color ? "#40AE25" : "#C92020",
             justifyContent:"center",
             paddingLeft:20,
-            marginTop:10
+            marginTop:10,
             
         }   
     })
