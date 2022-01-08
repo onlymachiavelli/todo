@@ -17,13 +17,7 @@ export const Task = ({...props}) =>{
     )
 }
 
-/*
-{
-            taskTitle:"fucking your bitch1",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:false
-        },
-*/
+
 const MyTasks = ({...props}) =>{
 
     const Datas = props.datas

@@ -6,15 +6,30 @@ import {Pen, Details, X} from './../UI/SVG'
 import Header from '../UI/Header'
 import home from './home'
 import { getData, storeData } from '../Func/AsyncStorage'
-const StoreData  = (taskTitle:any, taskDetails:any):void =>{
+export const putIn  = (task:any, detail:any):void =>{
     //get the datas 
+    /*
+{
+            taskTitle:"fucking your bitch1",
+            Details:"Im going to fuck your bitch until you die",
+            isDone:false
+        },
+*/
     const [datas, setDatas] = useState([])
     getData("todoTask").then(
         (res)=>{
             res ? setDatas(res) : setDatas(datas)
         }
     )
-    
+    let a:any = datas
+    a.push({
+        taskTitle:task,
+        taskDetails:detail
+    })
+    setDatas(a)
+    console.log(datas)
+    storeData("todoTask",datas)
+        
 }
 const AddNoteData = ({navigation}) =>{
     const [taskTitle, setTask] = useState("")
@@ -55,12 +70,13 @@ const AddNoteData = ({navigation}) =>{
                         </View>                
                     </ScrollView>
                 </View>
-                <TouchableOpacity style={addNoteStyle.button}>
+                <TouchableOpacity style={addNoteStyle.button} onPress={()=>{
+                    putIn(taskTitle, details)
+                }}                                      >
                     <Text style={addNoteStyle.textButton}>ADD DATA</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={addNoteStyle.cancelBtn} onPress={()=>{
-                    //alert(taskTitle)
                     navigation.navigate(home)
                 }}>
                     <X Width="20" Height="20" />
