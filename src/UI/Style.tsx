@@ -248,7 +248,12 @@ export const currentTask = Style({
         alignItems:"center",
         justifyContent:"center",
     },
-    
+    txt:{
+        color:"#fff",
+        fontWeight:"bold",
+        marginLeft:40,
+        marginTop:-18
+    }
 
 })
 
@@ -258,8 +263,10 @@ export const taskStyle = (color:any) =>{
             width:"90%",
             height:70,
             backgroundColor:Colors.purple,
-        
-            }   
+            justifyContent:"center",
+            paddingLeft:20,
+
+        }   
     })
 
     return style

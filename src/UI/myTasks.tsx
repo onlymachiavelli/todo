@@ -1,12 +1,15 @@
 import React, {} from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native'
 
-import {} from './SVG'
+import {Bars, } from './SVG'
 import {currentTask, taskStyle} from './Style'
 export const Task = ({...props}) =>{
     return(
         <View style={[currentTask.TaskBlock , taskStyle("").TaskBlock]}>
-
+            <TouchableOpacity onPress={()=>{alert("Hello world")}}>
+                <Bars Width="20" Height="20" />
+            </TouchableOpacity>
+            <Text style={currentTask.txt} >Hello world</Text>
         </View>
     )
 }
