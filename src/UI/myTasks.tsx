@@ -1,5 +1,6 @@
 import React, {} from 'react'
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native'
+import {getData} from './../Func/AsyncStorage'
 
 import {Bars,Trash } from './SVG'
 import {currentTask, taskStyle} from './Style'

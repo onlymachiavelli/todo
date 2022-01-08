@@ -1,11 +1,11 @@
-import React ,{ useState } from 'react'
+import React ,{ useState, useEffect } from 'react'
 import {View, Text, TouchableOpacity}from 'react-native'
 import {homeStyle, emptyStyle, addBtn, headerStyle} from './../UI/Style'
 import {storeData , getData, getAll,clearStorage,} from './../Func/AsyncStorage'
 import Header from './../UI/Header'
 import AddNoteData from './addNote'
 import {Rocket} from './../UI/SVG'
-import MyTasks from '../UI/myTasks'
+import MyTasks, { Task } from '../UI/myTasks'
 import { NavigationContainer } from '@react-navigation/native'
 
 import { createStackNavigator } from '@react-navigation/stack'
@@ -31,19 +31,24 @@ export const AddBtn = ({...props}) =>{
 }
 const Home = ({navigation}) =>{
     const [size, setSize] = useState(0)
-     getAll().then((res:any)=>{
-         let len = res.length
-        setSize(len)
-     })
-     let HomeComponent 
-  
-     size === 0 ? HomeComponent = <Empty/> : <MyTasks/>
+    const [datas, setDatas] = useState([])
+
+    useEffect(()=>{
+        getData("todoTask").then((res:any)=>{
+            let len = res.length
+            setDatas(len>0 ? res : datas)
+            
+           setSize(len)
+        })
+    },[])
      
+     const HomeComponent =  size >  0 ? <MyTasks datas={datas} />: <Empty/> 
 
     return(
         <View style={homeStyle.container}>
             <Header/>
-                <Text style={homeStyle.Title}>CURRENT TASKS : {size}</Text>
+
+                <Text style={homeStyle.Title}>CURRENT TASKS : {String(size)}</Text>
                 {HomeComponent}
 
             <AddBtn Travel={()=>{

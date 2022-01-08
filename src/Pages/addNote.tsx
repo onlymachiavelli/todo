@@ -6,34 +6,31 @@ import {Pen, Details, X} from './../UI/SVG'
 import Header from '../UI/Header'
 import home from './home'
 import { getData, storeData } from '../Func/AsyncStorage'
-export const putIn  = (task:any, detail:any):void =>{
-    //get the datas 
-    /*
-{
-            taskTitle:"fucking your bitch1",
-            Details:"Im going to fuck your bitch until you die",
-            isDone:false
-        },
-*/
-    let datas:any
-    getData("todoTask").then(
-        (res)=>{
-            datas = res
-            datas.push({
-                taskTitle:task,
-                taskDetails:detail
-            })
-            storeData("todoTask",datas)
-                
-        }
-    )
-    
-}
+
 const AddNoteData = ({navigation}) =>{
     const [taskTitle, setTask] = useState("")
     const [details, setDetails] = useState("")
 
+    const putIn  = (task:any, detail:any):void =>{
 
+        let datas:any
+        getData("todoTask").then(
+            (res)=>{
+                datas = !res ? [] : res
+                console.log(datas)
+                datas.push({
+                    taskTitle:task,
+                    taskDetails:detail,
+                    isDone:false
+                })
+                storeData("todoTask",datas)
+                    
+            }
+        ).catch(
+           
+            )
+        
+    }
     return (
         <View style={homeStyle.container}>
             <Header/>
