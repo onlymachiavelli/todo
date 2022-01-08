@@ -15,19 +15,16 @@ export const putIn  = (task:any, detail:any):void =>{
             isDone:false
         },
 */
-    const [datas, setDatas] = useState([])
+    let datas:any
     getData("todoTask").then(
         (res)=>{
-            res ? setDatas(res) : setDatas(datas)
+            datas = res
         }
     )
-    let a:any = datas
-    a.push({
+    datas.push({
         taskTitle:task,
         taskDetails:detail
     })
-    setDatas(a)
-    console.log(datas)
     storeData("todoTask",datas)
         
 }
