@@ -5,7 +5,7 @@ import {Bars,Trash } from './SVG'
 import {currentTask, taskStyle} from './Style'
 export const Task = ({...props}) =>{
     return(
-        <View style={[currentTask.TaskBlock , taskStyle("").TaskBlock]}>
+        <View style={[currentTask.TaskBlock , taskStyle(props.isChecked).TaskBlock]}>
             <TouchableOpacity onPress={()=>{alert("Hello world")}}>
                 <Bars Width="20" Height="20" />
             </TouchableOpacity>
@@ -78,18 +78,20 @@ const MyTasks = ({...props}) =>{
    
     return (
         <View style={currentTask.container}>
-            <ScrollView style={{width:"100%",}}>
-            {
-                Datas.reduce((acc:any, curr:any)=>[curr,...acc],[]).map(
-                    
-                    (res:any, ind:any) =>{
-                        return(
-                            <Task TaskName={res.taskTitle} />
-                        )
-                    }
-                 )
-            }
-            </ScrollView>
+            <View style={{width:"100%" , alignItems:"center",}}>
+                <ScrollView style={{width:"100%",height:"100%"}}>
+                {
+                    Datas.reduce((acc:any, curr:any)=>[curr,...acc],[]).map(
+                        
+                        (res:any, ind:any) =>{
+                            return(
+                                <Task TaskName={res.taskTitle} isChecked={res.isDone} />
+                            )
+                        }
+                    )
+                }
+                </ScrollView>
+            </View>
         </View>
     )
 }

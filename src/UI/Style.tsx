@@ -242,12 +242,15 @@ export const addNoteStyle = Style({
 export const currentTask = Style({
     container:{
         width:"100%",
-        maxHeight:"60%",
+        maxHeight:"62%",
         height:"auto",
         marginTop:25,
         alignItems:"center",
         justifyContent:"center",
-        textAlign:"center"
+        textAlign:"center",
+        backgroundColor:"#242a2e",
+        paddingTop:10,
+        paddingBottom:20,
     },
     txt:{
         color:"#fff",
@@ -263,12 +266,12 @@ export const currentTask = Style({
 
 })
 
-export const taskStyle = (color:any) =>{
+export const taskStyle = (color:boolean) =>{
     let style = Style({
         TaskBlock:{
             width:"90%",
             height:70,
-            backgroundColor:Colors.purple,
+            backgroundColor: color ? "#40AE25" : "#C92020",
             justifyContent:"center",
             paddingLeft:20,
             marginTop:10
