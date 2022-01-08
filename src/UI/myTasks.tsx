@@ -1,7 +1,8 @@
 import React, {} from 'react'
 import {View, Text} from 'react-native'
+
 import {} from './SVG'
-import {} from './Style'
+import {currentTask} from './Style'
 const MyTasks = ({...props}) =>{
     const Datas = [
         {
@@ -34,3 +35,5 @@ const MyTasks = ({...props}) =>{
         <View></View>
     )
 }
+
+export default MyTasks

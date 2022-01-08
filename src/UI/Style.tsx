@@ -238,3 +238,10 @@ export const addNoteStyle = Style({
     },
 
 })
+
+const currentTask = Style({
+    container:{
+
+    },
+    
+})

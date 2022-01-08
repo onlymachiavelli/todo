@@ -5,7 +5,9 @@ import {storeData , getData, getAll,clearStorage,} from './../Func/AsyncStorage'
 import Header from './../UI/Header'
 import AddNoteData from './addNote'
 import {Rocket} from './../UI/SVG'
+import MyTasks from '../UI/myTasks'
 import { NavigationContainer } from '@react-navigation/native'
+
 import { createStackNavigator } from '@react-navigation/stack'
 const Pages = createStackNavigator()
 
@@ -46,7 +48,11 @@ const Home = ({navigation}) =>{
         <View style={homeStyle.container}>
             <Header/>
                 <Text style={homeStyle.Title}>CURRENT TASKS : {size}</Text>
-                {HomeComponent}
+                {
+                //HomeComponent
+                }
+
+                <MyTasks />
             <AddBtn Travel={()=>{
                 navigation.navigate(AddNoteData)
             }}/>
