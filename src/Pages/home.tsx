@@ -40,7 +40,7 @@ const Home = ({navigation}) =>{
             setDatas(len > 0 ? res : datas)
             
            setSize(len)
-           setComp(size ===  0 ?homeComp :  <MyTasks datas={datas} />  )  
+           setComp(size ===  0 ? homeComp :  <MyTasks datas={datas} />  )  
         })
     },[])
      

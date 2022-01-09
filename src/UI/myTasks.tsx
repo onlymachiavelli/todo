@@ -13,25 +13,25 @@ const deleteArr = (arr : any, ind:any) =>{
     }
     return newarr
 }
+const DeleteObject = (ind:any):void =>{
+    const [datas, setDatas] = useState([])
+    useEffect(()=>{
+        getData("todoTask").then(
+            (res) =>{
+                setDatas(res)
+            }
+        )
 
-export const Task = ({...props}) =>{
-    const DeleteObject = (ind:any):void =>{
-        const [datas, setDatas] = useState([])
-        useEffect(()=>{
-            getData("todoTask").then(
-                (res) =>{
-                    setDatas(res)
-                }
-            )
+        let a:any = datas
+        a = deleteArr(a, ind)
+        setDatas(a)
 
-            let a:any = datas
-            a = deleteArr(a, ind)
-            setDatas(a)
-
-            
-        },[])
         
-    }
+    },[])
+    storeData("todoTask", datas)
+}
+export const Task = ({...props}) =>{
+    
     return(
         <View style={[currentTask.TaskBlock , taskStyle(props.isChecked).TaskBlock]}>
             <TouchableOpacity onPress={()=>{alert("Hello world")}}>
