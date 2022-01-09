@@ -257,7 +257,7 @@ export const currentTask = Style({
         color:"#fff",
         fontWeight:"bold",
         marginLeft:37,
-        marginTop:-18,
+        marginTop:-19,
         maxWidth:"70%",
     },
     trashIcon:{

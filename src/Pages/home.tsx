@@ -32,6 +32,7 @@ export const AddBtn = ({...props}) =>{
 const Home = ({navigation}) =>{
     const [size, setSize] = useState(0)
     const [datas, setDatas] = useState([])
+    const [homeComp, setComp] = useState(<Empty/>)
 
     useEffect(()=>{
         getData("todoTask").then((res:any)=>{
@@ -39,17 +40,18 @@ const Home = ({navigation}) =>{
             setDatas(len > 0 ? res : datas)
             
            setSize(len)
+           setComp(size ===  0 ?homeComp :  <MyTasks datas={datas} />  )  
         })
     },[])
      
-     const HomeComponent =  size >  0 ? <MyTasks datas={datas} />: <Empty/> 
-
+     
+    
     return(
         <View style={homeStyle.container}>
             <Header/>
 
                 <Text style={homeStyle.Title}>CURRENT TASKS : {String(size)}</Text>
-                {HomeComponent}
+                {homeComp}
 
             <AddBtn Travel={()=>{
                 navigation.navigate(AddNoteData)
