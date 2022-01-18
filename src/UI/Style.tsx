@@ -283,3 +283,13 @@ export const taskStyle = (color:boolean) =>{
 
     return style
 }
+
+
+
+export const menuStyle = Style({
+    container:{
+        width:deviceWidth, 
+        height:deviceHeight, 
+
+    }
+})
